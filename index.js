@@ -33,7 +33,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   }
   
   function appointment(agent) {
-    const doctor = agent.parameters.doctor;
+    const doctor = agent.parameters.doctor.name;
     const date = agent.parameters.date;
     const name = agent.parameters.name;
     const phone = agent.parameters.phone;
